@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Multi-step form</title>
+  </head>
+  <body>
+    <main
+      class="bg-[hsl(206,94%,87%,0.3)] w-screen h-screen md:flex md:items-center md:justify-center"
+    >
+      <section
+        class="flex flex-col md:flex-row md:justify-evenly md:items-center md:bg-white md:h-[30rem] md:w-[55rem] md:rounded-2xl shadow-1xl"
+      >
+        <section
+          class="flex flex-row h-60 w-full bg-[url('/multi-step-form/assets/images/bg-sidebar-mobile.svg')] bg-no-repeat bg-cover gap-6 justify-center pt-15 pb-10 text-xl font-extrabold md:h-[95%] md:w-[30%] md:flex-col md:bg-[url('/multi-step-form/assets/images/bg-sidebar-desktop.svg')] md:bg-contain md:rounded-lg md:ml-[-3rem] md:justify-start md:text-xs"
+        >
+          <section class="flex flex-row gap-4 md:gap-2 md:ml-5">
+            <section
+              class="w-12 h-12 rounded-full text-white border-3 border-white bor flex items-center justify-center md:w-8 md:h-8"
+              id="section1"
+              style="background-color: #bee1f8; color: black"
+            >
+              1
+            </section>
+            <section
+              class="hidden md:flex flex-col text-white text-lg md:text-xs"
+            >
+              <section class="text-[hsl(229,24%,87%,0.8)]">Step 1</section>
+              <section>YOUR INFO</section>
+            </section>
+          </section>
+          <section class="flex flex-row gap-4 md:gap-2 md:ml-5">
+            <section
+              class="w-12 h-12 bg-transparent rounded-full text-white border-3 border-white flex items-center justify-center md:w-8 md:h-8"
+              id="section2"
+            >
+              2
+            </section>
+            <section
+              class="hidden md:flex flex-col text-white text-lg md:text-xs"
+            >
+              <section class="text-[hsl(229,24%,87%,0.8)]">Step 2</section>
+              <section>SELECT PLAN</section>
+            </section>
+          </section>
+          <section class="flex flex-row gap-4 md:gap-2 md:ml-5">
+            <section
+              class="w-12 h-12 bg-transparent rounded-full text-white border-3 border-white bor flex items-center justify-center md:w-8 md:h-8"
+              id="section3"
+            >
+              3
+            </section>
+            <section
+              class="hidden md:flex flex-col text-white text-lg md:text-xs"
+            >
+              <section class="text-[hsl(229,24%,87%,0.8)]">Step 3</section>
+              <section>ADD-ONS</section>
+            </section>
+          </section>
+          <section class="flex flex-row gap-4 md:gap-2 md:ml-5">
+            <section
+              class="w-12 h-12 bg-transparent rounded-full text-white border-3 border-white bor flex items-center justify-center md:w-8 md:h-8"
+              id="section4"
+            >
+              4
+            </section>
+            <section
+              class="hidden md:flex flex-col text-white text-lg md:text-xs"
+            >
+              <section class="text-[hsl(229,24%,87%,0.8)]">Step 4</section>
+              <section>SUMMARY</section>
+            </section>
+          </section>
+        </section>
+        <!-- index section-->
+        <section class="md:mt-[-20rem]" id="indexPage">
+          <section
+            class="bg-white shadow-2xs z-1 mt-[-5rem] h-[28rem] w-80 flex flex-col m-auto rounded-2xl pb-20 md:mt-5 md:h-[10rem] md:w-[30rem]"
+          >
+            <h1
+              class="mt-10 ml-6 mb-1 text-2xl text-[hsl(213,96%,18%)] font-bold md:mt-5 md:mb-0 md:ml-0"
+            >
+              Personal info
+            </h1>
+            <p
+              class="w- text-base ml-6 mr-10 text-[hsl(231,11%,63%)] whitespace-pre-line md:mt-[-1rem] md:ml-0 md:text-sm"
+            >
+              Please provide your name, email address, and phone number.
+            </p>
+
+            <form class="ml-6 mt-5 flex flex-col gap-6 md:ml-0">
+              <label for="fname" class="flex flex-col">
+                <section class="flex flex-row gap-24 items-center md:gap-60">
+                  <span class="text-[hsl(213,96%,18%)]">Name</span>
+                  <span
+                    class="text-[hsl(354,84%,57%)] text-xs hidden"
+                    id="fnameError"
+                    >This field is required</span
+                  >
+                </section>
+                <input
+                  type="text"
+                  placeholder="e.g. Stephen King"
+                  class="w-64 h-[2.5rem] pl-3 outline rounded-xs border border-gray-300 md:w-[25rem]"
+                  id="name"
+                />
+              </label>
+              <label for="email" class="flex flex-col">
+                <section class="flex flex-row gap-24 items-center md:gap-60">
+                  <span class="text-[hsl(213,96%,18%)]">Email</span>
+                  <span
+                    class="text-[hsl(354,84%,57%)] text-xs hidden"
+                    id="emailError"
+                    >This field is required</span
+                  >
+                </section>
+                <input
+                  type="email"
+                  placeholder="e.g. StephenKing@gmail.com"
+                  class="w-64 h-[2.5rem] pl-3 outline rounded-xs border border-gray-300 md:w-[25rem]"
+                  id="email"
+                />
+              </label>
+              <label for="phone" class="flex flex-col">
+                <section class="flex flex-row gap-8 items-center md:gap-44">
+                  <span class="text-[hsl(213,96%,18%)]">Phone Number</span>
+                  <span
+                    class="text-[hsl(354,84%,57%)] text-xs hidden"
+                    id="phoneError"
+                    >This field is required</span
+                  >
+                </section>
+                <input
+                  type="number"
+                  placeholder="e.g. +234 567 890"
+                  class="w-64 h-[2.5rem] pl-3 outline rounded-xs border border-gray-300 md:w-[25rem]"
+                  id="phone"
+                />
+              </label>
+            </form>
+            <br />
+            <button
+              class="hidden md:block md:w-30 md:p-1 md:bg-[hsl(213,96%,18%)] md:text-white md:rounded-sm md:ml-70 md:mt-10 index-next"
+            >
+              Next Step
+            </button>
+          </section>
+          <section
+            class="fixed w-full h-15 bottom-0 bg-white shadow-2xs flex items-center justify-end md:hidden"
+          >
+            <button
+              class="w-25 mr-10 h-10 p-1 bg-[hsl(213,96%,18%)] text-white rounded-sm index-next"
+            >
+              Next Step
+            </button>
+          </section>
+        </section>
+        <!-- plans section -->
+        <section class="md:mt-[-20rem] hidden" id="plansPage">
+          <section
+            class="bg-white shadow-2xs z-1 mt-[-5rem] h-[28rem] w-[22rem] flex flex-col m-auto rounded-2xl pb-20 md:mt-5 md:h-[10rem] md:w-[30rem]"
+          >
+            <h1
+              class="mt-10 ml-6 mb-1 text-2xl text-[hsl(213,96%,18%)] font-bold md:mt-5 md:mb-0 md:ml-0"
+            >
+              Select your plan
+            </h1>
+            <p
+              class="text-base mt-[-1rem] mr-10 ml-6 text-[hsl(231,11%,63%)] whitespace-pre-line md:ml-0 md:text-sm"
+            >
+              You have a option of monthly or yearly billing.
+            </p>
+            <section
+              class="flex flex-col gap-0 md:flex md:flex-row md:mt-3 md:ml-[-1rem] md:gap-3"
+            >
+              <section
+                class="flex flex-row gap-5 w-[19rem] rounded-md ml-5 mt-3 h-17 items-center md:items-start md:flex md:flex-col md:w-[10rem] md:h-[10rem] md:justify-between md:p-3 md:shadow-1xl"
+                style="border: 2px solid hsla(231, 11%, 63%, 0.4)"
+                id="arcade"
+              >
+                <img
+                  src="./assets/images/icon-arcade.svg"
+                  class="ml-4 md:w-10 md:h-10 md:max-w-[50px] md:max-h-[50px] md:ml-[-0.3rem]"
+                />
+                <section>
+                  <h2 class="text-[hsl(213,96%,18%)] font-bold" id="arcadeName">
+                    Arcade
+                  </h2>
+                  <p class="text-xs text-gray-500" id="arcade-cost">
+                    &dollar;9/mo
+                  </p>
+                  <p
+                    class="hidden text-xs text-[hsl(213,96%,18%)]"
+                    id="Arcade-yearly"
+                  >
+                    2 months free
+                  </p>
+                </section>
+              </section>
+              <section
+                class="flex flex-row gap-5 w-[19rem] rounded-md ml-5 mt-3 h-17 items-center md:items-start md:flex md:flex-col md:w-[10rem] md:h-[10rem] md:bg-white md:justify-between md:p-3 md:shadow-1xl"
+                style="border: 2px solid hsla(231, 11%, 63%, 0.4)"
+                id="advanced"
+              >
+                <img
+                  src="./assets/images/icon-advanced.svg"
+                  class="ml-4 md:w-10 md:h-10 md:max-w-[50px] md:max-h-[50px] md:ml-[-0.3rem]"
+                />
+                <section>
+                  <h2
+                    class="text-[hsl(213,96%,18%)] font-bold"
+                    id="advancedName"
+                  >
+                    Advanced
+                  </h2>
+                  <p class="text-xs text-gray-500" id="advanced-cost">
+                    &dollar;12/mo
+                  </p>
+                  <p
+                    class="hidden text-xs text-[hsl(213,96%,18%)]"
+                    id="Advanced-yearly"
+                  >
+                    2 months free
+                  </p>
+                </section>
+              </section>
+              <section
+                class="flex flex-row gap-5 w-[19rem] rounded-md ml-5 mt-3 h-17 items-center md:items-start md:flex md:flex-col md:w-[10rem] md:h-[10rem] md:bg-white md:justify-between md:p-3 md:shadow-1xl"
+                style="border: 2px solid hsla(231, 11%, 63%, 0.4)"
+                id="pro"
+              >
+                <img
+                  src="./assets/images/icon-pro.svg"
+                  class="ml-4 md:w-10 md:h-10 md:max-w-[50px] md:max-h-[50px] md:ml-[-0.3rem]"
+                />
+                <section>
+                  <h2 class="text-[hsl(213,96%,18%)] font-bold" id="proName">
+                    Pro
+                  </h2>
+                  <p class="text-xs text-gray-500" id="pro-cost">
+                    &dollar;15/mo
+                  </p>
+                  <p
+                    class="hidden text-xs text-[hsl(213,96%,18%)]"
+                    id="Pro-yearly"
+                  >
+                    2 months free
+                  </p>
+                </section>
+              </section>
+            </section>
+            <section
+              class="flex flex-row justify-center mt-5 text-[hsl(231,11%,63%)] md:flex md:flex-row gap-4 md:justify-center md:bg-[hsl(229,24%,87%,0.2)] md:w-[30rem] md:pt-2 md:pb-2 md:rounded-md md:mt-8"
+            >
+              <section
+                class="text-[hsl(213,96%,18%)] font-medium"
+                id="monthlyLabel"
+              >
+                Monthly
+              </section>
+              <div
+                class="relative w-12 h-7 bg-[hsl(213,96%,18%)] rounded-full p-1 flex items-center cursor-pointer"
+                id="toggleSwitch"
+              >
+                <div
+                  class="w-5 h-5 bg-white rounded-full"
+                  id="toggleCircle"
+                ></div>
+              </div>
+              <section class="text-gray-400 font-medium" id="yearlyLabel">
+                Yearly
+              </section>
+            </section>
+            <section class="md:flex md:flex-row md:mt-19 md:gap-[19rem]">
+              <p
+                class="hidden hover:text-blue-950 md:block md:text-[hsl(231,11%,63%)] md:text-sm font-bold plans-previous"
+              >
+                Go Back
+              </p>
+              <button
+                class="hidden md:block md:w-30 md:p-1 md:bg-[hsl(213,96%,18%)] md:text-white md:rounded-sm plans-next"
+              >
+                Next Step
+              </button>
+            </section>
+          </section>
+          <section
+            class="fixed w-full h-15 bottom-0 bg-white shadow-2xs flex items-center justify-between md:hidden"
+          >
+            <p
+              class="text-[hsl(231,11%,63%)] ml-8 md: md:text-sm font-bold plans-previous"
+            >
+              Go Back
+            </p>
+            <button
+              class="w-25 mr-10 h-10 p-1 bg-[hsl(213,96%,18%)] text-white rounded-sm plans-next"
+            >
+              Next Step
+            </button>
+          </section>
+        </section>
+        <!-- addons section -->
+        <section class="md:mt-[-18rem] hidden" id="addonsPage">
+          <section
+            class="bg-white shadow-2xs z-1 mt-[-5rem] h-[28rem] w-[22rem] flex flex-col m-auto rounded-2xl pb-20 md:mt-5 md:h-[10rem] md:w-[30rem]"
+          >
+            <h1
+              class="mt-10 ml-6 mb-1 text-2xl text-[hsl(213,96%,18%)] font-bold md:mt-5 md:mb-0 md:ml-0"
+            >
+              Pick add-ons
+            </h1>
+            <p
+              class="text-base ml-6 text-[hsl(231,11%,63%)] whitespace-pre-line md:mt-[-1rem] md:ml-0 md:text-sm"
+            >
+              Add-ons helps enhance your gaming experience.
+            </p>
+            <section class="md:flex md:flex-col md:mt-4">
+              <section
+                class="flex flex-row m-5 justify-between p-3 items-center rounded-md md:m-0 md:mt-3 md:flex md:flex-row md:justify-between md:pl-3 md:pr-5 md:w-[30rem] md:h-15 md:items-center md:rounded-md"
+                style="border: 2px solid hsla(231, 11%, 63%, 0.4)"
+                id="onlineServiceSection"
+              >
+                <section
+                  class="flex flex-row gap-5 md:flex md:flex-row md:gap-4"
+                >
+                  <input type="checkbox" class="md:w-3" id="onlineService" />
+                  <section>
+                    <h2
+                      class="text-[hsl(213,96%,18%)] font-bold md:text-xs"
+                      id="onlineServiceName"
+                    >
+                      Online service
+                    </h2>
+                    <p class="text-[hsl(231,11%,63%)] text-[0.8rem] md:text-xs">
+                      Access to multiplayer games
+                    </p>
+                  </section>
+                </section>
+                <p
+                  class="text-[0.9rem] text-[#4950ca] md:text-[0.8rem] font-bold"
+                  id="onlineServiceCost"
+                >
+                  +$1/mo
+                </p>
+              </section>
+              <section
+                class="flex flex-row m-5 justify-between p-3 rounded-md items-center md:m-0 md:mt-3 md:flex md:flex-row md:justify-between md:pl-3 md:pr-5 md:w-[30rem] md:h-15 md:items-center md:rounded-md"
+                style="border: 2px solid hsla(231, 11%, 63%, 0.4)"
+                id="largerStorageSection"
+              >
+                <section
+                  class="flex flex-row gap-5 md:flex md:flex-row md:gap-4"
+                >
+                  <input type="checkbox" class="md:w-3" id="largerStorage" />
+                  <section>
+                    <h2
+                      class="text-[hsl(213,96%,18%)] font-bold md:text-xs"
+                      id="largerStorageName"
+                    >
+                      Larger storage
+                    </h2>
+                    <p class="text-[hsl(231,11%,63%)] text-[0.8rem] md:text-xs">
+                      Extra 1TB of cloud save
+                    </p>
+                  </section>
+                </section>
+                <p
+                  class="text-[0.9rem] text-[#4950ca] md:text-[0.8rem] font-bold"
+                  id="largerStorageCost"
+                >
+                  +$2/mo
+                </p>
+              </section>
+              <section
+                class="flex flex-row m-5 justify-between p-3 rounded-md items-center md:m-0 md:mt-3 md:flex md:flex-row md:justify-between md:pl-3 md:pr-5 md:w-[30rem] md:h-15 md:items-center md:rounded-md"
+                style="border: 2px solid hsla(231, 11%, 63%, 0.4)"
+                id="customizableProfileSection"
+              >
+                <section
+                  class="flex flex-row gap-5 md:flex md:flex-row md:gap-4"
+                >
+                  <input
+                    type="checkbox"
+                    class="md:w-3"
+                    id="customizableProfile"
+                  />
+                  <section>
+                    <h2
+                      class="text-[hsl(213,96%,18%)] font-bold md:text-xs"
+                      id="customizableProfileName"
+                    >
+                      Customizable profile
+                    </h2>
+                    <p class="text-[hsl(231,11%,63%)] text-[0.8rem] md:text-xs">
+                      Custom theme on your profile
+                    </p>
+                  </section>
+                </section>
+                <p
+                  class="text-[0.9rem] text-[#4950ca] md:text-[0.8rem] font-bold"
+                  id="customizableProfileCost"
+                >
+                  +$2/mo
+                </p>
+              </section>
+            </section>
+            <section class="md:flex md:flex-row md:mt-22 md:gap-[19rem]">
+              <p
+                class="hidden md:block md:text-[hsl(231,11%,63%)] md:text-sm font-bold addons-previous hover:text-blue-950"
+              >
+                Go Back
+              </p>
+              <button
+                class="hidden md:block md:w-30 md:p-1 md:bg-[hsl(213,96%,18%)] md:text-white md:rounded-sm addons-next"
+              >
+                Next Step
+              </button>
+            </section>
+          </section>
+          <section
+            class="fixed w-full h-15 bottom-0 bg-white shadow-2xs flex items-center justify-between md:hidden"
+          >
+            <p
+              class=" text-[hsl(231,11%,63%)] ml-8 md: md:text-sm font-bold addons-previous "
+            >
+              Go Back
+            </p>
+            <button
+              class="w-25 mr-10 h-10 p-1 bg-[hsl(213,96%,18%)] text-white rounded-sm addons-next"
+            >
+              Next Step
+            </button>
+          </section>
+        </section>
+        <!-- finishing up section -->
+        <section class="md:mt-[-20rem] hidden" id="finishingPage">
+          <section
+            class="bg-white shadow-2xs z-1 mt-[-5rem] h-[28rem] w-[22rem] flex flex-col m-auto rounded-2xl pb-20 md:mt-5 md:h-[10rem] md:w-[30rem]"
+          >
+            <h1
+              class="mt-7 ml-6 text-2xl text-[hsl(213,96%,18%)] font-bold md:mt-5 md:mb-0 md:ml-0"
+            >
+              Finishing up
+            </h1>
+            <p
+              class="text-base ml-6 text-[hsl(231,11%,63%)] whitespace-pre-line md:mt-[-1rem] md:ml-0 md:text-sm"
+            >
+              Double check everything looks OK before confirming.
+            </p>
+            <section class="flex flex-col md:mt-5">
+              <section
+                class="flex flex-col bg-[hsl(229,24%,87%,0.3)] w-[19rem] m-auto rounded-md gap-3 p-5 md:w-[30rem]"
+                id="addonsSummary"
+              >
+                <section class="flex flex-row justify-between">
+                  <section class="flex flex-col">
+                    <section
+                      id="summaryGameName"
+                      class="text-[hsl(213,96%,18%)] font-bold"
+                    >
+                      Name(Monthly)
+                    </section>
+                    <section
+                      id="redirect"
+                      class="underline underline-offset-5 text-gray-500 md:text-[0.9rem]"
+                    >
+                      Change
+                    </section>
+                  </section>
+                  <section
+                    id="summaryGameCost"
+                    class="text-[hsl(213,96%,18%)] font-bold"
+                  >
+                    +$90/yr
+                  </section>
+                </section>
+                <hr />
+              </section>
+            </section>
+            <section class="flex flex-row justify-between p-8 md:pr-5">
+              <section class="md:ml-[-0.5rem] text-gray-500 text-[0.8rem]" id="totalName">
+                Total
+              </section>
+              <section class="text-[hsl(243,100%,62%)] text-xl font-bold" id="totalCost">
+                +0/yr
+              </section>
+            </section>
+            <section class="md:flex md:flex-row md:mt-7 md:gap-[19rem]">
+              <p
+                class="hover:text-blue-950 hidden md:block md:text-[hsl(231,11%,63%)] md:text-sm font-bold finishing-previous"
+              >
+                Go Back
+              </p>
+              <button
+                class="hidden md:block md:w-30 md:p-1 md:bg-[hsl(213,96%,18%)] md:text-white md:rounded-sm finishing-next"
+              >
+                Next Step
+              </button>
+            </section>
+          </section>
+          <section
+            class="fixed w-full h-15 bottom-0 bg-white shadow-2xs flex items-center justify-between md:hidden"
+          >
+            <p
+              class="text-[hsl(231,11%,63%)] ml-8 md: md:text-sm font-bold finishing-previous"
+            >
+              Go Back
+            </p>
+            <button
+              class="w-25 mr-10 h-10 p-1 bg-[hsl(213,96%,18%)] text-white rounded-sm finishing-next"
+            >
+              Next Step
+            </button>
+          </section>
+        </section>
+        <!-- thank you section -->
+        <section class="md:mt-[-15rem] hidden" id="thankYou">
+          <section
+            class="bg-white shadow-2xs z-1 mt-[-5rem] h-[28rem] w-[22rem] flex flex-col m-auto rounded-2xl pb-20 md:mt-5 md:h-[10rem] md:w-[30rem]"
+          >
+            <section
+              class="flex flex-col justify-center items-center p-5 mt-15 gap-4"
+            >
+              <img src="./assets/images/icon-thank-you.svg" />
+              <h1 class="text-3xl font-bold text-[hsl(213,96%,18%)]">
+                Thank You!
+              </h1>
+              <p
+                class="text-center justify-center items-center text-[hsl(231,11%,63%)] m-2 md:m-5"
+              >
+                Thanks for confirming your subscription! We hope you have fun
+                using our platform.If you ever need supprot,please feel free to
+                emial us at support@loremgaming.com
+              </p>
+            </section>
+          </section>
+        </section>
+      </section>
+    </main>
+  </body>
+  <script src="./script.js"></script>
+</html>
