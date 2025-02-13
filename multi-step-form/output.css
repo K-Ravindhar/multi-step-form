@@ -518,9 +518,6 @@
   }
 }
 @layer utilities {
-  .collapse {
-    visibility: collapse;
-  }
   .fixed {
     position: fixed;
   }
@@ -584,23 +581,11 @@
   .ml-8 {
     margin-left: calc(var(--spacing) * 8);
   }
-  .block {
-    display: block;
-  }
   .flex {
     display: flex;
   }
   .hidden {
     display: none;
-  }
-  .inline-flex {
-    display: inline-flex;
-  }
-  .list-item {
-    display: list-item;
-  }
-  .table {
-    display: table;
   }
   .h-5 {
     height: calc(var(--spacing) * 5);
@@ -659,17 +644,11 @@
   .w-screen {
     width: 100vw;
   }
-  .border-collapse {
-    border-collapse: collapse;
-  }
   .transform {
     transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
   }
   .cursor-pointer {
     cursor: pointer;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -751,6 +730,9 @@
   .bg-\[hsl\(229\,24\%\,87\%\,0\.3\)\] {
     background-color: hsl(229,24%,87%,0.3);
   }
+  .bg-\[hsl\(243\,100\%\,62\%\)\] {
+    background-color: hsl(243,100%,62%);
+  }
   .bg-transparent {
     background-color: transparent;
   }
@@ -759,12 +741,6 @@
   }
   .bg-\[url\(\'\.\/assets\/images\/bg-sidebar-mobile\.svg\'\)\] {
     background-image: url('./assets/images/bg-sidebar-mobile.svg');
-  }
-  .bg-\[url\(\'\/assets\/images\/bg-sidebar-mobile\.svg\'\)\] {
-    background-image: url('/assets/images/bg-sidebar-mobile.svg');
-  }
-  .bg-\[url\(\'\/multi-step-form\/assets\/images\/bg-sidebar-mobile\.svg\'\)\] {
-    background-image: url('/multi-step-form/assets/images/bg-sidebar-mobile.svg');
   }
   .bg-cover {
     background-size: cover;
@@ -1202,14 +1178,14 @@
       background-color: hsl(229,24%,87%,0.2);
     }
   }
+  .md\:bg-\[hsl\(243\,100\%\,62\%\)\] {
+    @media (width >= 48rem) {
+      background-color: hsl(243,100%,62%);
+    }
+  }
   .md\:bg-white {
     @media (width >= 48rem) {
       background-color: var(--color-white);
-    }
-  }
-  .md\:bg-\[url\(\'\.\.\/assets\/images\/bg-sidebar-desktop\.svg\'\)\] {
-    @media (width >= 48rem) {
-      background-image: url('../assets/images/bg-sidebar-desktop.svg');
     }
   }
   .md\:bg-\[url\(\'\.\/assets\/images\/bg-sidebar-desktop\.svg\'\)\] {
