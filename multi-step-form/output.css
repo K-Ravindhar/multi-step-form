@@ -536,17 +536,8 @@
   .z-1 {
     z-index: 1;
   }
-  .m-0 {
-    margin: calc(var(--spacing) * 0);
-  }
-  .m-1 {
-    margin: calc(var(--spacing) * 1);
-  }
   .m-2 {
     margin: calc(var(--spacing) * 2);
-  }
-  .m-4 {
-    margin: calc(var(--spacing) * 4);
   }
   .m-5 {
     margin: calc(var(--spacing) * 5);
@@ -611,14 +602,8 @@
   .table {
     display: table;
   }
-  .h-4 {
-    height: calc(var(--spacing) * 4);
-  }
   .h-5 {
     height: calc(var(--spacing) * 5);
-  }
-  .h-6 {
-    height: calc(var(--spacing) * 6);
   }
   .h-7 {
     height: calc(var(--spacing) * 7);
@@ -647,35 +632,14 @@
   .h-screen {
     height: 100vh;
   }
-  .w-4 {
-    width: calc(var(--spacing) * 4);
-  }
   .w-5 {
     width: calc(var(--spacing) * 5);
-  }
-  .w-6 {
-    width: calc(var(--spacing) * 6);
-  }
-  .w-8 {
-    width: calc(var(--spacing) * 8);
-  }
-  .w-9 {
-    width: calc(var(--spacing) * 9);
   }
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
-  .w-20 {
-    width: calc(var(--spacing) * 20);
-  }
   .w-25 {
     width: calc(var(--spacing) * 25);
-  }
-  .w-50 {
-    width: calc(var(--spacing) * 50);
-  }
-  .w-52 {
-    width: calc(var(--spacing) * 52);
   }
   .w-64 {
     width: calc(var(--spacing) * 64);
@@ -683,20 +647,11 @@
   .w-80 {
     width: calc(var(--spacing) * 80);
   }
-  .w-96 {
-    width: calc(var(--spacing) * 96);
-  }
-  .w-\[18rem\] {
-    width: 18rem;
-  }
   .w-\[19rem\] {
     width: 19rem;
   }
   .w-\[22rem\] {
     width: 22rem;
-  }
-  .w-auto {
-    width: auto;
   }
   .w-full {
     width: 100%;
@@ -737,12 +692,6 @@
   .gap-0 {
     gap: calc(var(--spacing) * 0);
   }
-  .gap-1 {
-    gap: calc(var(--spacing) * 1);
-  }
-  .gap-2 {
-    gap: calc(var(--spacing) * 2);
-  }
   .gap-3 {
     gap: calc(var(--spacing) * 3);
   }
@@ -758,26 +707,8 @@
   .gap-8 {
     gap: calc(var(--spacing) * 8);
   }
-  .gap-9 {
-    gap: calc(var(--spacing) * 9);
-  }
-  .gap-10 {
-    gap: calc(var(--spacing) * 10);
-  }
-  .gap-12 {
-    gap: calc(var(--spacing) * 12);
-  }
-  .gap-16 {
-    gap: calc(var(--spacing) * 16);
-  }
   .gap-24 {
     gap: calc(var(--spacing) * 24);
-  }
-  .gap-28 {
-    gap: calc(var(--spacing) * 28);
-  }
-  .gap-32 {
-    gap: calc(var(--spacing) * 32);
   }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
@@ -798,17 +729,9 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
-  .border-2 {
-    border-style: var(--tw-border-style);
-    border-width: 2px;
-  }
   .border-3 {
     border-style: var(--tw-border-style);
     border-width: 3px;
-  }
-  .border-4 {
-    border-style: var(--tw-border-style);
-    border-width: 4px;
   }
   .border-\[hsl\(354\,84\%\,57\%\)\] {
     border-color: hsl(354,84%,57%);
@@ -818,9 +741,6 @@
   }
   .border-white {
     border-color: var(--color-white);
-  }
-  .border-b-gray-900 {
-    border-bottom-color: var(--color-gray-900);
   }
   .bg-\[hsl\(206\,94\%\,87\%\,0\.3\)\] {
     background-color: hsl(206,94%,87%,0.3);
@@ -836,6 +756,12 @@
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-\[url\(\'\.\/assets\/images\/bg-sidebar-mobile\.svg\'\)\] {
+    background-image: url('./assets/images/bg-sidebar-mobile.svg');
+  }
+  .bg-\[url\(\'\/assets\/images\/bg-sidebar-mobile\.svg\'\)\] {
+    background-image: url('/assets/images/bg-sidebar-mobile.svg');
   }
   .bg-\[url\(\'\/multi-step-form\/assets\/images\/bg-sidebar-mobile\.svg\'\)\] {
     background-image: url('/multi-step-form/assets/images/bg-sidebar-mobile.svg');
@@ -896,9 +822,6 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
-  .text-\[0\.6rem\] {
-    font-size: 0.6rem;
   }
   .text-\[0\.8rem\] {
     font-size: 0.8rem;
@@ -962,66 +885,10 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
-  .hover\:border-red-900 {
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--color-red-900);
-      }
-    }
-  }
-  .hover\:border-red-950 {
-    &:hover {
-      @media (hover: hover) {
-        border-color: var(--color-red-950);
-      }
-    }
-  }
-  .hover\:bg-amber-950 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-amber-950);
-      }
-    }
-  }
-  .hover\:bg-red-950 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-red-950);
-      }
-    }
-  }
-  .hover\:text-\[\[hsl\(213\,96\%\,18\%\)\]\] {
-    &:hover {
-      @media (hover: hover) {
-        color: [hsl(213,96%,18%)];
-      }
-    }
-  }
-  .hover\:text-\[bg-\[hsl\(213\,96\%\,18\%\)\]\] {
-    &:hover {
-      @media (hover: hover) {
-        color: bg-[hsl(213,96%,18%)];
-      }
-    }
-  }
   .hover\:text-blue-950 {
     &:hover {
       @media (hover: hover) {
         color: var(--color-blue-950);
-      }
-    }
-  }
-  .hover\:text-red-500 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-red-500);
-      }
-    }
-  }
-  .in-hover\:bg-amber-950 {
-    :where(*:hover) & {
-      @media (hover: hover) {
-        background-color: var(--color-amber-950);
       }
     }
   }
@@ -1340,9 +1207,14 @@
       background-color: var(--color-white);
     }
   }
-  .md\:bg-\[url\(\'\/multi-step-form\/assets\/images\/bg-sidebar-desktop\.svg\'\)\] {
+  .md\:bg-\[url\(\'\.\.\/assets\/images\/bg-sidebar-desktop\.svg\'\)\] {
     @media (width >= 48rem) {
-      background-image: url('/multi-step-form/assets/images/bg-sidebar-desktop.svg');
+      background-image: url('../assets/images/bg-sidebar-desktop.svg');
+    }
+  }
+  .md\:bg-\[url\(\'\.\/assets\/images\/bg-sidebar-desktop\.svg\'\)\] {
+    @media (width >= 48rem) {
+      background-image: url('./assets/images/bg-sidebar-desktop.svg');
     }
   }
   .md\:bg-contain {
@@ -1400,28 +1272,6 @@
   .md\:text-\[0\.9rem\] {
     @media (width >= 48rem) {
       font-size: 0.9rem;
-    }
-  }
-  .md\:text-\[1rem\] {
-    @media (width >= 48rem) {
-      font-size: 1rem;
-    }
-  }
-  .md\:font-bold {
-    @media (width >= 48rem) {
-      --tw-font-weight: var(--font-weight-bold);
-      font-weight: var(--font-weight-bold);
-    }
-  }
-  .md\:font-medium {
-    @media (width >= 48rem) {
-      --tw-font-weight: var(--font-weight-medium);
-      font-weight: var(--font-weight-medium);
-    }
-  }
-  .md\:text-\[0\.\] {
-    @media (width >= 48rem) {
-      color: 0.;
     }
   }
   .md\:text-\[hsl\(231\,11\%\,63\%\)\] {
