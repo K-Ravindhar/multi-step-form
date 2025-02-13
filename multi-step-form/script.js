@@ -16,7 +16,11 @@ function fnameErrorFunction() {
     fname.classList.remove("border-gray-300");
     fname.classList.add("border-[hsl(354,84%,57%)]");
     return false;
-  } else {
+  } else if(!/\d/.test(fname.value)){
+    fnameError.classList.remove("hidden");
+    fnameError.innerHTML = "Enter atleast 1 digit";
+    return false;
+  }else {
     fname.classList.add("border-gray-300");
     fnameError.classList.add("hidden");
     return true;
@@ -46,6 +50,10 @@ function phoneErrorFunction() {
     phoneError.classList.remove("hidden");
     phone.classList.remove("border-gray-300");
     phone.classList.add("border-[hsl(354,84%,57%)]");
+    return false;
+  } else if(phone.value.length !== 10) {
+    phoneError.classList.remove("hidden");
+    phoneError.innerHTML = "10 Digits are Needed";
     return false;
   } else {
     phoneError.classList.add("hidden");
@@ -101,7 +109,7 @@ let advanced = document.getElementById("advanced");
 let pro = document.getElementById("pro");
 
 let isYearly = false;
-
+let plans_selected = false;
 let plan_name = "";
 // background change and border change
 arcade.addEventListener("click", function () {
@@ -115,6 +123,7 @@ arcade.addEventListener("click", function () {
   purchase_list["cost"] = parseInt(
     arcadeCost.textContent.replace(/[$/moyr]/, "")
   );
+  plans_selected = true;
   console.log(purchase_list);
 });
 advanced.addEventListener("click", function () {
@@ -128,6 +137,7 @@ advanced.addEventListener("click", function () {
   purchase_list["cost"] = parseInt(
     advancedCost.textContent.replace(/[$/moyr]/g, "")
   );
+  plans_selected = true;
   console.log(purchase_list);
 });
 pro.addEventListener("click", function () {
@@ -141,6 +151,7 @@ pro.addEventListener("click", function () {
   purchase_list["cost"] = parseInt(
     proCost.textContent.replace(/[$/moyr]/g, "")
   );
+  plans_selected = true;
   console.log(purchase_list);
 });
 
@@ -183,12 +194,17 @@ toggleSwitch.addEventListener("click", () => {
 // next and previous buttons
 plansNext.forEach((button) => {
   button.addEventListener("click", function () {
-    document.getElementById("plansPage").classList.add("hidden");
-    document.getElementById("addonsPage").classList.remove("hidden");
-    document.getElementById("section2").style.backgroundColor = "transparent";
-    document.getElementById("section3").style.backgroundColor = "#bee1f8";
-    document.getElementById("section3").style.color = "black"
-    document.getElementById("section2").style.color = "white";
+    if(plans_selected){
+      document.getElementById("plansPage").classList.add("hidden");
+      document.getElementById("addonsPage").classList.remove("hidden");
+      document.getElementById("section2").style.backgroundColor = "transparent";
+      document.getElementById("section3").style.backgroundColor = "#bee1f8";
+      document.getElementById("section3").style.color = "black"
+      document.getElementById("section2").style.color = "white";
+    } else{
+      alert("Select at least one plan to proceed");
+    }
+    
   });
 });
 
