@@ -53,4 +53,4 @@ This project is a front-end coding challenge that involves creating a multi-step
 
 ## Link
 
-https://multi-step-form-eight-tau.vercel.app/
+https://multi-step-form-ivory-eight.vercel.app/
